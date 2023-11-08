@@ -2,43 +2,103 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
     background-image: url("../../images/wallpaper1.jpeg");
     background-size: cover;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .landing-container {
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.79);
+    width: 100vw;
+    height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: -2vw;
+}
+
+.landing-container-1 {
+    height: 100%;
+    width: 20%;
+    background-image: url("../../images/black-gradient.png");
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3vw;
+    overflow: hidden;
+    border-bottom-left-radius: 1.5vw;
+    border-top-left-radius: 1.5vw;
+}
+
+.landing-container-2 {
+    height: 100%;
+    width: 25%;
+    background-color: rgba(0,0,0,0.7);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-radius: 2vw;
+    gap: 1vw;
     padding: 3vw;
+    border-bottom-right-radius: 0.4vw;
+    border-top-right-radius: 0.4vw;
+
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 3.5vw;
     color: #ffffff;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2vw;
+    color: #ffffff;
+    margin: 0;
 }
 
 button {
-    padding: 1rem 2rem;
+    padding: 0.7vw 2vw;
     border: none;
-    border-radius: 2rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    border-radius: 5vw;
+    font-size: 1.1vw;
+    font-weight: 500;
     color: #424242;
     background-color: rgba(246, 246, 246, 0.9);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    margin: 1rem;
+    margin: 1vw;
+    width: 80%;
 }
 
 button:hover {
     transform: scale(1.05);
     background-color: #ffffff;
+}
+
+.landing-bottom-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8vw;
+    margin-top: 8vw;
+}
+
+.hover-box {
+    display: none;
+    /*position: absolute;*/
+    /*background-color: #000049;*/
+    color: white;
+    border-radius: 5px;
+    top: 50%;
+    left: -5%;
+    font-size: 2vw;
+}
+
+.heading:hover + .hover-box {
+    display: block;
+
 }
