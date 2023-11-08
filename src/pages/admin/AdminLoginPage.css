@@ -1,0 +1,54 @@
+.admin-login-background {
+    background-image: url("../../images/wallpaper-admin.jpeg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: 0 auto;
+    padding: 3vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.79);
+}
+
+/* Estilos para el título del formulario */
+.admin-login h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Estilos para el campo de contraseña */
+.admin-login input[type="password"] {
+    width: 60%;
+    padding: 0.7vw 1vw;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 0.5vw;
+}
+
+/* Estilos para el botón de inicio de sesión */
+.admin-login button {
+    width: 66%;
+    background-color: #001241;
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    padding: 0.7vw 0;
+    cursor: pointer;
+    font-size: 1.1vw;
+}
+
+/* Estilos para el botón de inicio de sesión al pasar el ratón */
+.admin-login button:hover {
+    background-color: #024d9f;
+}
