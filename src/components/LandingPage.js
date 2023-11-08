@@ -9,7 +9,7 @@ const LandingPage = () => {
     return (
         <div className="landing">
             <div className="landing-container">
-                <h1>Landing Page</h1>
+                <h1>EXPENDEDORA de OPERAS</h1>
                 <button onClick={() => {navigate('/user-login')}} >User Login</button>
                 <button onClick={() => {navigate('/admin-login')}} >Admin Login</button>
             </div>
