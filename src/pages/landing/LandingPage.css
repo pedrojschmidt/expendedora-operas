@@ -61,12 +61,14 @@ h2 {
 
 button {
     padding: 0.7vw 2vw;
-    border: none;
-    border-radius: 5vw;
+    /*border: none;*/
+    border-radius: 0.3vw;
     font-size: 1.1vw;
     font-weight: 500;
-    color: #424242;
-    background-color: rgba(246, 246, 246, 0.9);
+    /*color: #424242;*/
+    background-color: transparent;
+    border: 0.2vw solid white;
+    color: white;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     margin: 1vw;
@@ -76,6 +78,7 @@ button {
 button:hover {
     transform: scale(1.05);
     background-color: #ffffff;
+    color: #424242;
 }
 
 .landing-bottom-container {
