@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './AdminLoginPage.css'
 import {useNavigate} from "react-router-dom";
+import GoBackButton from "../../components/GoBackButton";
 
 const AdminLoginPage = () => {
 
@@ -21,6 +22,7 @@ const AdminLoginPage = () => {
 
     return (
         <div className="admin-login-background">
+            <GoBackButton />
             <div className="admin-login">
                 <h2>Iniciar sesión como administrador</h2>
                 <input

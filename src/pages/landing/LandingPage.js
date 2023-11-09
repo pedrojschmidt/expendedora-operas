@@ -19,8 +19,8 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="landing-container-2">
-                    <button onClick={() => {navigate('/home')}} >Comprar Operas</button>
-                    <button onClick={() => {navigate('/admin-login')}} >Ingresar como Administrador</button>
+                    <button className="contained" onClick={() => {navigate('/admin-login')}} >Ingresar como Administrador</button>
+                    <button className="outlined" onClick={() => {navigate('/home')}} >Comprar Operas</button>
                 </div>
             </div>
             <div className="landing-bottom-container">

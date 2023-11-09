@@ -1,0 +1,11 @@
+.go-back {
+    background-color: rgba(0, 0, 0, 0.79);
+    color: white;
+    border: none;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    cursor: pointer;
+    border-radius: 0.5vw;
+    padding: 0.2vw 1vw;
+}
