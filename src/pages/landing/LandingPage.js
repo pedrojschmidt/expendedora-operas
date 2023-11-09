@@ -1,6 +1,7 @@
 import React from 'react'
 import {useNavigate} from "react-router-dom";
 import './LandingPage.css'
+import Video from "../../videos/background-video-2.mp4";
 
 const LandingPage = () => {
 
@@ -8,6 +9,9 @@ const LandingPage = () => {
 
     return (
         <div className="landing">
+            <video autoPlay muted loop className="background-video">
+                <source src={Video} type="video/mp4"/>
+            </video>
             <div className="landing-container">
                 <div className="landing-container-1">
                     <h1>EX</h1>
