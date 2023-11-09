@@ -11,7 +11,7 @@
 
 .landing-container {
     width: 100vw;
-    height: 15vw;
+    height: 16vw;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -20,7 +20,7 @@
 
 .landing-container-1 {
     height: 100%;
-    width: 20%;
+    width: 15%;
     background-image: url("../../images/black-gradient.png");
     display: flex;
     align-items: start;
@@ -34,7 +34,7 @@
 
 .landing-container-2 {
     height: 100%;
-    width: 25%;
+    width: 27%;
     background-color: rgba(0,0,0,0.7);
     display: flex;
     align-items: center;
