@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .admin-login {
@@ -36,19 +37,18 @@
     border-radius: 0.5vw;
 }
 
-/* Estilos para el botón de inicio de sesión */
-.admin-login button {
-    width: 66%;
-    background-color: #001241;
-    color: white;
-    border: none;
-    border-radius: 0.5vw;
-    padding: 0.7vw 0;
-    cursor: pointer;
+.admin-login .contained {
+    width: 80%;
+    padding: 0.7vw 2vw;
+    border-radius: 0.3vw;
     font-size: 1.1vw;
+    font-weight: 500;
+    border: 0.2vw solid white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 1vw;
+
+    background-color: transparent;
+    color: white;
 }
 
-/* Estilos para el botón de inicio de sesión al pasar el ratón */
-.admin-login button:hover {
-    background-color: #024d9f;
-}

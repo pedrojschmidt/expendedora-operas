@@ -31,7 +31,7 @@ const AdminLoginPage = () => {
                     value={password}
                     onChange={handlePasswordChange}
                 />
-                <button onClick={handleLogin}>Ingresar</button>
+                <button className="contained" onClick={handleLogin}>Ingresar</button>
             </div>
         </div>
     );

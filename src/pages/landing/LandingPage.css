@@ -71,20 +71,20 @@ h2 {
     margin: 1vw;
 }
 
-.landing button:hover {
+button:hover {
     transform: scale(1.03);
     /*background-color: #ffffff;*/
     /*color: #424242;*/
 }
 
 .landing .contained {
-    background-color: transparent;
-    color: white;
+    background-color: white;
+    color: #424242;
 }
 
 .landing .outlined {
-    background-color: white;
-    color: #424242;
+    background-color: transparent;
+    color: white;
 }
 
 .landing-bottom-container {

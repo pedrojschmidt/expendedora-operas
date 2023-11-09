@@ -1,0 +1,25 @@
+.home {
+    background-image: url("../../images/wallpaper2.jpeg");
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif !important;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .contained {
+    width: 80%;
+    padding: 0.7vw 2vw;
+    border-radius: 0.3vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+    border: 0.2vw solid white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 1vw;
+
+    background-color: white;
+    color: #424242;
+}
