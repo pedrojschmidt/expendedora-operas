@@ -1,0 +1,66 @@
+.admin-page {
+    background-image: url("../../images/wallpaper-admin.jpeg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.admin-page-container {
+    width: 30%;
+    padding: 3vw;
+    border-radius: 1vw;
+    background-color: rgba(0, 0, 0, 0.79);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+
+.contained {
+    width: 80%;
+    padding: 0.7vw 2vw;
+    border-radius: 0.3vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+    border: 0.2vw solid white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 1vw;
+
+    background-color: white;
+    color: #424242;
+}
+
+.outlined {
+    width: 80%;
+    padding: 0.7vw 2vw;
+    border-radius: 0.3vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+    border: 0.2vw solid white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 1vw;
+
+    background-color: transparent;
+    color: white;
+}
+
+.admin-page button:hover {
+    transform: scale(1.03);
+    background-color: #ffffff;
+    color: #424242;
+}
+
+.admin-page input {
+    width: 76%;
+    padding: 0.7vw 2%;
+    border-radius: 0.3vw;
+    border: none;
+    margin: 12% 0 4%;
+    background-color: rgba(255, 255, 255, 0.88);
+}
