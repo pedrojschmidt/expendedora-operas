@@ -24,7 +24,7 @@ const AdminLoginPage = () => {
         <div className="admin-login-background">
             <GoBackButton />
             <div className="admin-login">
-                <h2>Iniciar sesión como administrador</h2>
+                <h2>Administrador</h2>
                 <input
                     type="password"
                     placeholder="Contraseña"
