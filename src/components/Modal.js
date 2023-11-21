@@ -1,3 +1,5 @@
+import './Modal.css';
+import {IoCloseOutline} from "react-icons/io5";
 
 const Modal = ({ isOpen, onRequestClose, children }) => {
     if (!isOpen) {
@@ -8,7 +10,7 @@ const Modal = ({ isOpen, onRequestClose, children }) => {
         <div className="modal">
             <div className="modal-content">
                 <button className="modal-close" onClick={onRequestClose}>
-                    Cerrar
+                    <IoCloseOutline size="2vw"/>
                 </button>
                 {children}
             </div>

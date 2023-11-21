@@ -31,12 +31,12 @@
 
 /* Estilos para el campo de contraseña */
 .admin-login input[type="password"] {
-    width: 72%;
-    font-size: 1.1vw;
-    padding: 0.7vw 1vw;
-    margin: 1vw 0;
+    width: 76%;
+    padding: 0.7vw 2%;
+    border-radius: 0.3vw;
+    margin: 8% 0 4%;
+    background-color: rgba(255, 255, 255, 0.88);
     border: none;
-    border-radius: 0.5vw;
 }
 
 .admin-login .contained {
