@@ -23,17 +23,19 @@
 
 /* Estilos para el título del formulario */
 .admin-login h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.8vw;
+    margin-bottom: 2vw;
+    font-weight: 500;
     color: white;
 }
 
 /* Estilos para el campo de contraseña */
 .admin-login input[type="password"] {
-    width: 60%;
+    width: 72%;
+    font-size: 1.1vw;
     padding: 0.7vw 1vw;
-    margin: 10px 0;
-    border: 1px solid #ccc;
+    margin: 1vw 0;
+    border: none;
     border-radius: 0.5vw;
 }
 
