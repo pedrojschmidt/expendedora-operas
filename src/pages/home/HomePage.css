@@ -23,3 +23,30 @@
     background-color: white;
     color: #424242;
 }
+
+.variety-conatiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.variety {
+    width: 40%;
+}
+
+.variety-name {
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin: 20% 1vw;
+    color: white;
+    border-radius: 0.2vw;
+    padding: 0.5vw;
+    box-shadow: 0 0 0.3vw 0.06vw rgba(255, 255, 255, 0.4);
+}
+
+.variety-stock {
+    font-size: 1.2vw;
+    margin: 20% 1vw;
+    color: white;
+}
