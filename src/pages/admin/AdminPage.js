@@ -20,7 +20,8 @@ const AdminPage = () => {
 
     const handleUpdateStock = () => {
         // Agrega aquí la lógica para actualizar el stock.
-        closeModal(); // Cierra el modal después de actualizar el stock.
+        setActualStock(Number(actualStock) + Number(addedStock));
+        // closeModal(); // Cierra el modal después de actualizar el stock.
     };
 
     const handleAddStock = (event) => {
@@ -37,15 +38,25 @@ const AdminPage = () => {
             <Modal isOpen={isModalOpen} onRequestClose={closeModal}>
                 <h2>Actualizar Stock</h2>
                 {/* Agrega los campos y lógica necesarios para actualizar el stock en el modal */}
-                <input
-                    type="number"
-                    placeholder="Contraseña"
-                    value={addedStock}
-                    onChange={handleAddStock}
-                    min={0}
-                    max={200 - actualStock}
-                />
-                <button className="outlined" onClick={handleUpdateStock}>Guardar Cambios</button>
+                <div className="stock-container">
+                    <div className="actual-stock">
+                        Stock Actual: {actualStock}
+                    </div>
+                    <div className="add-stock">
+                        <div>
+                            Agregar Stock:
+                        </div>
+                        <input
+                            type="number"
+                            placeholder=""
+                            value={addedStock}
+                            onChange={handleAddStock}
+                            min={0}
+                            max={200 - actualStock}
+                        />
+                    </div>
+                </div>
+                <button className="contained" onClick={handleUpdateStock}>Guardar Cambios</button>
             </Modal>
         </div>
     );

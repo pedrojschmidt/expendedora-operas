@@ -14,8 +14,8 @@
 
 .modal-content {
     border-radius: 1vw;
-    width: 34%;
-    height: 250px;
+    width: 40%;
+    height: 20vw;
     padding: 2%;
     background-color: rgba(0, 0, 0, 0.6);
     background-image: url("../images/black-gradient.png");
@@ -25,26 +25,34 @@
     z-index: 1000;
 }
 
+.modal-content h2 {
+    font-size: 1.8vw;
+    margin-top: 0.5vw;
+    font-weight: 500;
+}
+
+.modal-content input {
+    width: 20%;
+    padding: 0.7vw 2%;
+    font-size: 1vw;
+    border-radius: 0.3vw;
+    background-color: rgba(255, 255, 255, 0.88);
+    border: none;
+    text-align: center;
+}
+
 .modal-close {
     position: absolute;
-    top: 5%;
-    right: 3%;
+    top: 10%;
+    right: 5%;
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 16px;
     color: #ffffff;
-    padding: 0;
+    padding: 0.05vw 0.1vw;
+    border-radius: 50%;
 }
 
 .modal-close:hover {
-    position: absolute;
-    top: 5%;
-    right: 3%;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
     color: #ffffff;
-    padding: 0;
 }

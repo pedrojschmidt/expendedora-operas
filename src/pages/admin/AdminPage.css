@@ -20,6 +20,34 @@
     gap: 2vw;
 }
 
+.admin-page-container h2 {
+    font-size: 1.8vw;
+    margin-bottom: 1vw;
+    font-weight: 500;
+}
+
+.stock-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
+    margin: 12% 10% 10%;
+}
+
+.actual-stock {
+    font-size: 1.3vw;
+    color: white;
+}
+
+.add-stock {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-size: 1.3vw;
+    color: white;
+}
+
 .contained {
     width: 80%;
     padding: 0.7vw 2vw;
@@ -56,11 +84,11 @@
     color: #424242;
 }
 
-.admin-page input {
-    width: 76%;
-    padding: 0.7vw 2%;
-    border-radius: 0.3vw;
-    border: none;
-    margin: 12% 0 4%;
-    background-color: rgba(255, 255, 255, 0.88);
-}
+/*.admin-page input {*/
+/*    width: 76%;*/
+/*    padding: 0.7vw 2%;*/
+/*    border-radius: 0.3vw;*/
+/*    border: none;*/
+/*    margin: 12% 0 4%;*/
+/*    background-color: rgba(255, 255, 255, 0.88);*/
+/*}*/

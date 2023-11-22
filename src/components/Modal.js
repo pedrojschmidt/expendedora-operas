@@ -10,7 +10,7 @@ const Modal = ({ isOpen, onRequestClose, children }) => {
         <div className="modal">
             <div className="modal-content">
                 <button className="modal-close" onClick={onRequestClose}>
-                    <IoCloseOutline size="2vw"/>
+                    <IoCloseOutline size="1.8vw"/>
                 </button>
                 {children}
             </div>
