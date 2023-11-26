@@ -34,7 +34,7 @@
 
 .variety {
     width: 40%;
-    box-shadow: 0 0 0.3vw 0.06vw rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0.3vw 0.06vw rgba(0, 0, 0, 0.4);
     border-radius: 0.3vw;
 }
 

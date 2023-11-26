@@ -2,6 +2,7 @@ import './HomePage.css'
 import GoBackButton from "../../components/GoBackButton";
 import React, {useState} from "react";
 import Modal from "../../components/Modal";
+import {buy} from "../../service/api";
 
 const HomePage = () => {
 
@@ -18,9 +19,17 @@ const HomePage = () => {
         setIsModalOpen(false);
     };
 
+    const sendMessageToMQTTTopic = (topic) => {
+        // client.publish(topic, topic+'comprar'); // Envía el mensaje al topic MQTT
+        buy(topic).then(response => {
+            console.log(response);
+        })
+    };
+
     const handleOriginalPurchase = () => {
         if (originalActualStock > 0) {
             setOriginalActualStock(Number(originalActualStock) - Number(1));
+            sendMessageToMQTTTopic('OPERAS/original');
         } else {
             alert("No hay stock de Opera Original");
         }
@@ -29,6 +38,7 @@ const HomePage = () => {
     const handleChocolatePurchase = () => {
         if (chocolateActualStock > 0) {
             setChocolateActualStock(Number(chocolateActualStock) - Number(1));
+            sendMessageToMQTTTopic('OPERAS/chocolate');
         } else {
             alert("No hay stock de Opera Chocolate");
         }
@@ -37,6 +47,7 @@ const HomePage = () => {
     const handleStrawberyPurchase = () => {
         if (strawberyActualStock > 0) {
             setStrawberyActualStock(Number(strawberyActualStock) - Number(1));
+            sendMessageToMQTTTopic('OPERAS/strawbery');
         } else {
             alert("No hay stock de Opera Frutilla");
         }
