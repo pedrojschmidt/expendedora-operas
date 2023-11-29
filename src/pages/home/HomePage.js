@@ -1,15 +1,23 @@
 import './HomePage.css'
 import GoBackButton from "../../components/GoBackButton";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Modal from "../../components/Modal";
-import {buy} from "../../service/api";
+import {buy, getStock} from "../../service/api";
 
 const HomePage = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [originalActualStock, setOriginalActualStock] = useState(50);
-    const [chocolateActualStock, setChocolateActualStock] = useState(20);
-    const [strawberyActualStock, setStrawberyActualStock] = useState(30);
+    const [originalActualStock, setOriginalActualStock] = useState(0);
+    const [chocolateActualStock, setChocolateActualStock] = useState(0);
+    const [strawberyActualStock, setStrawberyActualStock] = useState(0);
+
+    useEffect(() => {
+        getStock().then(response => {
+            setOriginalActualStock(response.stock);
+            setChocolateActualStock(response.stock);
+            setStrawberyActualStock(response.stock);
+        })
+    }, [])
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -29,7 +37,7 @@ const HomePage = () => {
     const handleOriginalPurchase = () => {
         if (originalActualStock > 0) {
             setOriginalActualStock(Number(originalActualStock) - Number(1));
-            sendMessageToMQTTTopic('OPERAS/original');
+            sendMessageToMQTTTopic('OperasOriginales');
         } else {
             alert("No hay stock de Opera Original");
         }
@@ -38,7 +46,7 @@ const HomePage = () => {
     const handleChocolatePurchase = () => {
         if (chocolateActualStock > 0) {
             setChocolateActualStock(Number(chocolateActualStock) - Number(1));
-            sendMessageToMQTTTopic('OPERAS/chocolate');
+            sendMessageToMQTTTopic('OperasChocolate');
         } else {
             alert("No hay stock de Opera Chocolate");
         }
@@ -47,7 +55,7 @@ const HomePage = () => {
     const handleStrawberyPurchase = () => {
         if (strawberyActualStock > 0) {
             setStrawberyActualStock(Number(strawberyActualStock) - Number(1));
-            sendMessageToMQTTTopic('OPERAS/strawbery');
+            sendMessageToMQTTTopic('OperasFrutilla');
         } else {
             alert("No hay stock de Opera Frutilla");
         }
