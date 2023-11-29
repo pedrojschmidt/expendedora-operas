@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Modal from "../../components/Modal";
 import './AdminPage.css';
 import GoBackButton from "../../components/GoBackButton";
+import {addStock, getStock} from "../../service/api";
 
 const AdminPage = () => {
 
@@ -9,6 +10,12 @@ const AdminPage = () => {
     const [addedStock, setAddedStock] = useState(0);
     // pedirselo al back
     const [actualStock, setActualStock] = useState(50);
+
+    useEffect(() => {
+        getStock().then(response => {
+            setActualStock(response.stock);
+        })
+    }, [])
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -21,6 +28,9 @@ const AdminPage = () => {
     const handleUpdateStock = () => {
         // Agrega aquí la lógica para actualizar el stock.
         setActualStock(Number(actualStock) + Number(addedStock));
+        addStock(Number(addedStock)).then(response => {
+            console.log(response);
+        })
         // closeModal(); // Cierra el modal después de actualizar el stock.
     };
 
