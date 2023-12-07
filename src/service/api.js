@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const restApiEndpoint = "http://localhost:8000"
 
-export const getStock = async () => {
-    return await axios.get(restApiEndpoint + `/getStock`)
+export const getStock = async (type) => {
+    return await axios.post(restApiEndpoint + `/getStock`, { type: type })
         .then(response => {
             if (response.status === 200) {
                 return response.data;
@@ -14,8 +14,8 @@ export const getStock = async () => {
 
 }
 
-export const addStock = async (stock) => {
-    return await axios.post(restApiEndpoint + `/addStock`, { stock: stock })
+export const addStock = async (stock, type) => {
+    return await axios.post(restApiEndpoint + `/addStock`, { stock: stock, type: type })
         .then(response => {
             if (response.status === 200) {
                 return response.data;
@@ -26,8 +26,8 @@ export const addStock = async (stock) => {
 
 }
 
-export const buy = async (topic) => {
-    return await axios.post(restApiEndpoint + `/buy`, { topic: topic })
+export const buy = async (type, topic) => {
+    return await axios.post(restApiEndpoint + `/buy`, { type: type, topic: topic })
         .then(response => {
             if (response.status === 200) {
                 return response.data;

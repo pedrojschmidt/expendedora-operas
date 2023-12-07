@@ -32,19 +32,44 @@
     align-items: center;
     justify-content: space-between;
     gap: 1vw;
-    margin: 12% 10% 10%;
+    margin: 5% 10% 5%;
 }
 
-.actual-stock {
-    font-size: 1.3vw;
+.actual-stock-originals {
+    width: 50%;
+    font-size: 1.2vw;
     color: white;
+    background-color: #888;
+    border-radius: 0.3vw;
+    padding: 1%;
+    box-shadow: 0 0 0.6vw 0.06vw rgba(255, 255, 255, 0.4);
+}
+
+.actual-stock-chocolate {
+    width: 50%;
+    font-size: 1.2vw;
+    color: white;
+    background-color: #482d23;
+    border-radius: 0.3vw;
+    padding: 1%;
+    box-shadow: 0 0 0.6vw 0.06vw rgba(255, 255, 255, 0.4);
+}
+
+.actual-stock-strawberry {
+    width: 50%;
+    font-size: 1.2vw;
+    color: white;
+    background-color: #ce6aa1;
+    border-radius: 0.3vw;
+    padding: 1%;
+    box-shadow: 0 0 0.6vw 0.06vw rgba(255, 255, 255, 0.4);
 }
 
 .add-stock {
     display: flex;
     align-items: center;
     gap: 1vw;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     color: white;
 }
 

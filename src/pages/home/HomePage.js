@@ -12,9 +12,13 @@ const HomePage = () => {
     const [strawberyActualStock, setStrawberyActualStock] = useState(0);
 
     useEffect(() => {
-        getStock().then(response => {
+        getStock("stock_originals").then(response => {
             setOriginalActualStock(response.stock);
+        })
+        getStock("stock_chocolate").then(response => {
             setChocolateActualStock(response.stock);
+        })
+        getStock("stock_strawberry").then(response => {
             setStrawberyActualStock(response.stock);
         })
     }, [])
@@ -27,9 +31,8 @@ const HomePage = () => {
         setIsModalOpen(false);
     };
 
-    const sendMessageToMQTTTopic = (topic) => {
-        // client.publish(topic, topic+'comprar'); // Envía el mensaje al topic MQTT
-        buy(topic).then(response => {
+    const buyOperas = (type, topic) => {
+        buy(type, topic).then(response => {
             console.log(response);
         })
     };
@@ -37,7 +40,7 @@ const HomePage = () => {
     const handleOriginalPurchase = () => {
         if (originalActualStock > 0) {
             setOriginalActualStock(Number(originalActualStock) - Number(1));
-            sendMessageToMQTTTopic('OperasOriginales');
+            buyOperas('stock_originals', 'OPERAS/originals/bought');
         } else {
             alert("No hay stock de Opera Original");
         }
@@ -46,7 +49,7 @@ const HomePage = () => {
     const handleChocolatePurchase = () => {
         if (chocolateActualStock > 0) {
             setChocolateActualStock(Number(chocolateActualStock) - Number(1));
-            sendMessageToMQTTTopic('OperasChocolate');
+            buyOperas('stock_chocolate', 'OPERAS/chocolate/bought');
         } else {
             alert("No hay stock de Opera Chocolate");
         }
@@ -55,7 +58,7 @@ const HomePage = () => {
     const handleStrawberyPurchase = () => {
         if (strawberyActualStock > 0) {
             setStrawberyActualStock(Number(strawberyActualStock) - Number(1));
-            sendMessageToMQTTTopic('OperasFrutilla');
+            buyOperas('stock_strawberry', 'OPERAS/strawberry/bought');
         } else {
             alert("No hay stock de Opera Frutilla");
         }
