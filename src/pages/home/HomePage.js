@@ -2,14 +2,23 @@ import './HomePage.css'
 import GoBackButton from "../../components/GoBackButton";
 import React, {useEffect, useState} from "react";
 import Modal from "../../components/Modal";
-import {buy, getStock} from "../../service/api";
+import {buy, checkService, getStock} from "../../service/api";
 
 const HomePage = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isInService, setIsInService] = useState(false);
     const [originalActualStock, setOriginalActualStock] = useState(0);
     const [chocolateActualStock, setChocolateActualStock] = useState(0);
     const [strawberyActualStock, setStrawberyActualStock] = useState(0);
+
+    // const [serviceAux, setServiceAux] = useState(false);
+
+    useEffect(() => {
+        checkService().then(response => {
+            setIsInService(response.inService);
+        })
+    } ,[])
 
     useEffect(() => {
         getStock("stock_originals").then(response => {
@@ -24,7 +33,15 @@ const HomePage = () => {
     }, [])
 
     const openModal = () => {
-        setIsModalOpen(true);
+        // setServiceAux(!serviceAux)
+        checkService().then(response => {
+            setIsInService(response.inService);
+            if (response.inService) {
+                setIsModalOpen(true);
+            } else {
+                alert("Servicio no disponible");
+            }
+        })
     };
 
     const closeModal = () => {
