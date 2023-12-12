@@ -2,6 +2,17 @@ import axios from 'axios';
 
 const restApiEndpoint = "http://localhost:8000"
 
+export const checkMachineOpen = async () => {
+    return await axios.get(restApiEndpoint + `/checkMachineOpen`)
+        .then(response => {
+            if (response.status === 200) {
+                return response.data;
+            } else {
+                throw Error("ERROR");
+            }
+        })
+}
+
 export const checkService = async () => {
     return await axios.get(restApiEndpoint + `/checkService`)
         .then(response => {

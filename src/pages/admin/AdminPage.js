@@ -2,17 +2,24 @@ import React, {useEffect, useState} from "react";
 import Modal from "../../components/Modal";
 import './AdminPage.css';
 import GoBackButton from "../../components/GoBackButton";
-import {addStock, getStock} from "../../service/api";
+import {addStock, checkMachineOpen, checkService, getStock} from "../../service/api";
 
 const AdminPage = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isMachineOpen, setIsMachineOpen] = useState(false);
     const [originalAddedStock, setOriginalAddedStock] = useState(0);
     const [chocolateAddedStock, setChocolateAddedStock] = useState(0);
     const [strawberyAddedStock, setStrawberyAddedStock] = useState(0);
     const [originalActualStock, setOriginalActualStock] = useState(0);
     const [chocolateActualStock, setChocolateActualStock] = useState(0);
     const [strawberyActualStock, setStrawberyActualStock] = useState(0);
+
+    useEffect(() => {
+        checkMachineOpen().then(response => {
+            setIsMachineOpen(response.isMachineOpen);
+        })
+    } ,[])
 
     useEffect(() => {
         getStock("stock_originals").then(response => {
@@ -27,7 +34,14 @@ const AdminPage = () => {
     }, [])
 
     const openModal = () => {
-        setIsModalOpen(true);
+        checkMachineOpen().then(response => {
+            setIsMachineOpen(response.isMachineOpen);
+            if (response.isMachineOpen) {
+                setIsModalOpen(true);
+            } else {
+                alert("Máquina cerrada");
+            }
+        })
     };
 
     const closeModal = () => {

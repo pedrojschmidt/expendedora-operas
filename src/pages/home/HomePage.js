@@ -12,8 +12,6 @@ const HomePage = () => {
     const [chocolateActualStock, setChocolateActualStock] = useState(0);
     const [strawberyActualStock, setStrawberyActualStock] = useState(0);
 
-    // const [serviceAux, setServiceAux] = useState(false);
-
     useEffect(() => {
         checkService().then(response => {
             setIsInService(response.inService);
@@ -33,7 +31,6 @@ const HomePage = () => {
     }, [])
 
     const openModal = () => {
-        // setServiceAux(!serviceAux)
         checkService().then(response => {
             setIsInService(response.inService);
             if (response.inService) {
